@@ -1,0 +1,122 @@
+@import "/src/scss/variables";
+@import "/src/scss/functions";
+ /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+  #footer {
+    background: $color-bg2;
+    padding: 0 0 30px 0;
+    color: $color-negative;
+    font-size: 14px;
+    .footer-top {
+      background: $color-bg;
+      border-bottom: 1px solid $color-primary;
+      padding: 60px 0 30px 0;
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-negative;
+        position: relative;
+        padding-bottom: 12px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 0;
+        font-family: "Raleway", sans-serif;
+        color: $color-negative;
+      }
+      .footer-info{
+        .social-links a {
+          font-size: 18px;
+          display: inline-block;
+          background: $color-bg;
+          color: $color-negative;
+          line-height: 1;
+          padding: 8px 0;
+          margin-right: 4px;
+          border-radius: 4px;
+          text-align: center;
+          width: 36px;
+          height: 36px;
+          transition: 0.3s;
+          &:hover {
+            background: $color-highlighted;
+            color: $color-default;
+            text-decoration: none;
+          }
+        }
+      }
+      .footer-links {
+        margin-bottom: 30px;
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            &:first-child {
+              padding-top: 0;
+            }
+            i {
+              padding-right: 2px;
+              color: $color-highlighted;
+              font-size: 18px;
+              line-height: 1;
+            }
+          }
+          a {
+            color: $color-negative;
+            transition: 0.3s;
+            display: inline-block;
+            line-height: 1;
+            &:hover {
+              color: $color-highlighted;
+            }
+          }
+        }
+      }
+      .footer-newsletter form {
+        margin-top: 30px;
+        background: $color-negative;
+        padding: 6px 10px;
+        position: relative;
+        border-radius: 4px;
+        input[type=email] {
+          border: 0;
+          padding: 4px;
+          width: calc(100% - 110px);
+        }
+        input[type=submit] {
+          position: absolute;
+          top: 0;
+          right: -2px;
+          bottom: 0;
+          border: 0;
+          background: none;
+          font-size: 16px;
+          padding: 0 20px;
+          background: $color-highlighted;
+          color: $color-default;
+          transition: 0.3s;
+          border-radius: 0 4px 4px 0;
+          &:hover {
+            background: $color-highlighted;
+          }
+        }
+      }
+
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+    }
+    .credits {
+      padding-top: 10px;
+      text-align: center;
+      font-size: 13px;
+      color: $color-negative;
+    }
+  }

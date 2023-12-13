@@ -1,0 +1,55 @@
+
+div.course-ementa{
+    padding: 2rem;
+    background-color: #222222;
+    color: #FFF;
+    font: bold 1rem 'Courier New', Courier, monospace;
+    margin-top: 4.5rem;
+    margin-bottom: 1rem;
+    counter-reset: modulo;
+    h1{ 
+        font: bold 2rem 'Courier New', Courier, monospace;
+        color: #FE8D59;
+    }
+    h2{
+        font: bold 1.5rem 'Courier New', Courier, monospace;
+        margin-top: 1rem;
+        color: #23C55C;
+
+        &:before{
+            counter-increment: modulo;
+            content: "Modulo " counter(modulo) ">";
+        }
+        span{
+            &:before {
+                content: "_ ";
+                animation: blink 1s steps(1, end) infinite;
+            }
+            @keyframes blink {
+                0% {
+                    opacity: 1;
+                    }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    ul{
+        list-style: none;
+        counter-reset: item;
+        li{
+            &:before {
+                color: #D7BA7D;
+                counter-increment: item;
+                content: counter(modulo) "." counters(item, ".") " ";
+            }
+        }
+    }
+}
+
+
+ 

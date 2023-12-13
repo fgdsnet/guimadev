@@ -1,0 +1,49 @@
+@import "/src/scss/variables";
+@import "/src/scss/functions";
+.logo {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+
+  .logo.logo-footer {
+    display: none;
+  }
+
+  .logo-sm.logo-footer {
+    display: block;
+  }
+
+  .logo-sm {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: 1px;
+    display: none;
+  }
+  
+  .logo a, .logo-sm a {
+    color: $color-negative;
+    text-decoration: none;
+    font-family: $font-logo-02;
+  }
+  
+  .logo a span, .logo-sm a span {
+    color: $color-highlighted;
+    font-family: $font-logo-01;
+  }
+  
+  .logo img, .logo-sm img {
+    max-height: 40px;
+  }
+
+  @media (max-width: 360px) {
+    .logo  {
+      display: none;
+    }
+    .logo-sm{
+      display: block;
+    }
+  }  
