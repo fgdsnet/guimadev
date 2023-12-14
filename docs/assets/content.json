@@ -1,0 +1,259 @@
+{
+    "curso": {
+      "titulo": "Desenvolvimento de Aplicações Web com Angular",
+      "ementa": [
+        {
+          "modulo": "Introdução ao Angular e Ambiente de Desenvolvimento",
+          "topicos": [
+            {
+              "descricao": "Visão Geral do Angular",
+              "subtopicos": ["O que é Angular?", "Principais conceitos e terminologia"]
+            },
+            {
+              "descricao": "Estrutura de um Projeto Angular",
+              "subtopicos": [
+                "Arquitetura do Angular",
+                [
+                  "Arquitetura Cliente-Servidor",
+                  ["Comunicação Cliente-Servidor", "Vantagens e Desvantagens"]
+                ],
+                [
+                  "Single Page Applications (SPAs)",
+                  ["Conceito de SPAs", "Comparação com Aplicações Tradicionais"]
+                ],
+                [
+                  "Component-Based Architecture",
+                  ["Composição de Componentes", "Reutilização de Componentes"]
+                ]
+              ],
+              "subtopicosAdicionais": [
+                "Componentes, Módulos, Diretivas e Serviços",
+                "Arquivos de Configuração (angular.json)",
+                "Estrutura de Pastas Padrão"
+              ]
+            },
+            {
+              "descricao": "Configuração do Ambiente de Desenvolvimento",
+              "subtopicos": [
+                "Instalação do Node.js e npm",
+                "Instalação do Angular CLI",
+                "Criação de um novo projeto Angular"
+              ]
+            }
+          ]
+        },
+        {
+          "modulo": "Componentes e Templates",
+          "topicos": [
+            {
+              "descricao": "Conceitos Básicos de Componentes",
+              "subtopicos": [
+                "Criação e Uso de Componentes",
+                "Propriedades e Eventos",
+                "Comunicação entre Componentes"
+              ]
+            },
+            {
+              "descricao": "Templates e Data Binding",
+              "subtopicos": [
+                {
+                  "descricao": "Conceitos Básicos",
+                  "subtopicos": ["Estrutura de Template", "Sintaxe de Interpolação"]
+                },
+                {
+                  "descricao": "Property Binding",
+                  "subtopicos": ["Vinculação Unidirecional", "Vinculação Bidirecional com [(ngModel)]"]
+                },
+                {
+                  "descricao": "Event Binding",
+                  "subtopicos": ["Manipulação de Eventos", "Passagem de Parâmetros em Eventos"]
+                },
+                {
+                  "descricao": "Two-Way Data Binding",
+                  "subtopicos": ["Utilizando ngModel", "Considerações sobre Two-Way Binding"]
+                },
+                {
+                  "descricao": "Diretivas Estruturais",
+                  "subtopicos": ["*ngIf", "*ngFor", "*ngSwitch"]
+                },
+                {
+                  "descricao": "Diretivas de Atributo",
+                  "subtopicos": ["ngClass", "ngStyle", "ngModel"]
+                },
+                {
+                  "descricao": "Template Reference Variables",
+                  "subtopicos": ["Obtendo Referência a Elementos no Template"]
+                },
+                {
+                  "descricao": "Pipes",
+                  "subtopicos": ["Utilizando Pipes Padrão", "Criando Pipes Personalizados"]
+                },
+                {
+                  "descricao": "Formulários Template-Driven",
+                  "subtopicos": ["Criando e Validando Formulários", "Manipulação de Dados de Formulário"]
+                }
+              ]
+            },
+            {
+              "descricao": "Diretivas",
+              "subtopicos": ["\"*ngIf, *ngFor, *ngSwitch\"", "Criando Diretivas Personalizadas"]
+            }
+          ]
+        },
+        {
+          "modulo": "Serviços e Injeção de Dependências",
+          "topicos": [
+            {
+              "descricao": "Introdução a Serviços",
+              "subtopicos": ["O que são Serviços?", "Importância dos Serviços no Desenvolvimento Angular"]
+            },
+            {
+              "descricao": "Criação e Uso de Serviços",
+              "subtopicos": [
+                "Comandos Angular CLI para Criação de Serviços",
+                "Estrutura de Arquivos Gerada",
+                "Singleton Services e Instância Única"
+              ]
+            },
+            {
+              "descricao": "Injeção de Dependências",
+              "subtopicos": [
+                "Conceito de Injeção de Dependências",
+                "Vantagens e Boas Práticas",
+                {
+                  "descricao": "Utilizando o Injetor",
+                  "subtopicos": ["Entendendo o Papel do Injetor", "Manipulando Injeções de Dependências"]
+                }
+              ]
+            },
+            {
+              "descricao": "Comunicação entre Componentes usando Serviços",
+              "subtopicos": [
+                "Utilizando Serviços como Canal de Comunicação",
+                "Exemplo Prático de Compartilhamento de Dados",
+                {
+                  "descricao": "Event Emitters",
+                  "subtopicos": ["Uso e Implementação de Event Emitters"]
+                },
+                {
+                  "descricao": "BehaviorSubjects",
+                  "subtopicos": ["Compreendendo o Conceito de BehaviorSubjects", "Aplicações Práticas"]
+                }
+              ]
+            },
+            {
+              "descricao": "Hierarquia de Serviços",
+              "subtopicos": ["Serviços Providos em Níveis Diferentes", "Ordem de Resolução de Dependências"]
+            },
+            {
+              "descricao": "Utilização de Serviços Externos",
+              "subtopicos": ["Integração com APIs Externas", "Manipulação de Dados Externos com Serviços"]
+            },
+            {
+              "descricao": "Testes de Serviços",
+              "subtopicos": ["Estratégias para Testar Serviços", "Ferramentas e Bibliotecas de Teste"]
+            },
+            {
+              "descricao": "Melhores Práticas e Considerações Finais",
+              "subtopicos": ["Boas Práticas na Utilização de Serviços", "Evitando Problemas Comuns"]
+            }
+          ]
+        },
+        {
+          "modulo": "Roteamento e Navegação",
+          "topicos": [
+            {
+              "descricao": "Configuração de Rotas",
+              "subtopicos": ["Configurando Rotas no Angular", "Roteamento Aninhado"]
+            },
+            {
+              "descricao": "Navegação Programática",
+              "subtopicos": ["Navegando usando o Router Service", "Passando Parâmetros nas Rotas"]
+            },
+            {
+              "descricao": "Guards de Rota",
+              "subtopicos": ["CanActivate, CanDeactivate, Resolve"]
+            }
+          ]
+        },
+        {
+          "modulo": "Consumindo APIs HTTP",
+          "topicos": [
+            {
+              "descricao": "Introdução ao HTTP no Angular",
+              "subtopicos": ["HttpClientModule", "Observables e RxJS"]
+            },
+            {
+              "descricao": "Realizando Requisições HTTP",
+              "subtopicos": ["GET, POST, PUT, DELETE", "Manipulação de Respostas"]
+            },
+            {
+              "descricao": "Tratamento de Erros e Loading",
+              "subtopicos": ["Tratando Erros HTTP", "Exibindo Loading durante as Requisições"]
+            }
+          ]
+        },
+        {
+          "modulo": "Estilos e Animações",
+          "topicos": [
+            {
+              "descricao": "Estilizando Componentes",
+              "subtopicos": ["Utilizando CSS, SCSS/Sass", "Estilos Condicionais"]
+            },
+            {
+              "descricao": "Adicionando Animações",
+              "subtopicos": ["Usando Angular Animations", "Criando Efeitos de Transição"]
+            },
+            {
+              "descricao": "Integrando o Bootstrap",
+              "subtopicos": ["Adicionando Bootstrap ao Projeto", "Utilizando Componentes do Bootstrap"]
+            }
+          ]
+        },
+        {
+          "modulo": "Projeto Final - Desenvolvimento de um Aplicativo Web Completo",
+          "topicos": [
+            {
+              "descricao": "Definindo Requisitos do Projeto",
+              "subtopicos": ["Análise de Requisitos", "Design da Aplicação"]
+            },
+            {
+              "descricao": "Implementação do Projeto",
+              "subtopicos": [
+                "Criando Componentes e Serviços",
+                "Implementando Roteamento",
+                "Consumindo uma API HTTP",
+                "Estilizando a Aplicação"
+              ]
+            },
+            {
+              "descricao": "Testes e Depuração",
+              "subtopicos": ["Testando Componentes e Serviços", "Utilizando Ferramentas de Depuração"]
+            },
+            {
+              "descricao": "Publicação e Hospedagem",
+              "subtopicos": ["Configurando Ambientes de Produção", "Publicando o Aplicativo em Servidores Web"]
+            }
+          ]
+        },
+        {
+          "modulo": "Boas Práticas e Considerações Finais",
+          "topicos": [
+            {
+              "descricao": "Boas Práticas de Desenvolvimento Angular",
+              "subtopicos": ["Estrutura de Código", "Organização de Módulos e Componentes"]
+            },
+            {
+              "descricao": "Ferramentas e Recursos Úteis",
+              "subtopicos": ["Ferramentas de Desenvolvimento", "Comunidades e Recursos Online"]
+            },
+            {
+              "descricao": "Considerações Finais",
+              "subtopicos": ["Revisão Geral do Curso", "Próximos Passos no Desenvolvimento Angular"]
+            }
+          ]
+        }
+      ],
+      "descricao": "Este curso online abrange desde os conceitos fundamentais do Angular até o desenvolvimento prático de uma aplicação web completa, proporcionando aos participantes as habilidades necessárias para criar aplicações web modernas e interativas utilizando todo o potencial que o framework Angular oferece."
+    }
+}
