@@ -1,0 +1,122 @@
+
+div.resume{
+    padding: 2rem;
+    background-color: #222222;
+    color: #FFF;
+    font: bold 1rem 'Courier New', Courier, monospace;
+    margin-top: 4.5rem;
+    .content{
+        max-width: 70rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    a{
+        font-size: 1rem;
+        text-decoration: none;
+        color:skyblue;
+        font-weight: bold;
+    }
+    section{
+        font-weight: normal;
+        p{
+            margin-top: 1rem;
+            padding-left: 2rem;
+        }
+        .collapse-bar{
+            border-radius: .5rem;
+            background-color: #000;
+            //opacity: .5;
+            padding: .5rem;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            .bi-chevron-double-down{
+                display: none;
+                &:hover{
+                cursor: pointer;
+                }
+            }
+            .bi-chevron-double-up{
+                display: block;
+                &:hover{
+                cursor: pointer;
+                }
+            }
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        .collapsed{
+            .bi-chevron-double-down{
+                display: block !important;
+            }
+            .bi-chevron-double-up{
+                display: none !important;
+            }
+        }
+        &.work-xp{
+            h4{display: inline;}
+            .xp-list{
+                margin-left: 2rem;
+                .collapsible-content{
+                    padding-left: 1rem;
+                }
+            div.time{
+                display: inline-block;
+                div{
+                    display: inline-block;
+                    .label{
+                        color: #D7BA7D;
+                        font-weight: bold;
+                    }
+                    &.to{
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            }
+        }
+        .education-collapsible-content{
+            padding-left: 2rem;
+            h2{
+                margin-left: 0;
+            }
+        }
+    }
+    h1{ 
+        font: normal 2rem 'Courier New', Courier, monospace;
+        color: #FE8D59;
+    }
+
+    h2{
+        font: 1.2rem 'Courier New', Courier, monospace;
+        margin: 0;
+        margin-left: 1rem;
+        color: #23C55C;
+    }
+    .label{
+        font-size: 1rem;
+        color:hotpink;
+        margin:0
+    }
+    ul{
+        color: #D7BA7D;
+        list-style: "> ";
+        li{
+            span{
+                // &:before {
+                //     content: "> ";
+                //     opacity: .2;
+                //     margin: -3px;
+                //     font-weight: 400;
+                // }
+                opacity: 1;
+                color: #FFF;
+            }
+        }
+    }
+}

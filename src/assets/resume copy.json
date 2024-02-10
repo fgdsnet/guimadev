@@ -1,0 +1,101 @@
+{
+    "name": "Fabio Guimaraes",
+    "highlights": [
+        {"label": "", "description": "Microsoft Certified Professional"},
+        {"label":"website", "description": "https://www.fgds.net"}
+    ],
+    "contact": {
+        "email": "fgds.net@gmail.com",
+        "phone": "+1 (506) 233 6933",
+        "linkedin": "https://www.linkedin.com/in/fabio-guimaraes-0bb54720b",
+        "github": "https://github.com/fgds"
+    },
+    "professional-profile": {
+        "title": "PROFESSIONAL PROFILE",
+        "description": "With over 15 years of experience in implementing and maintaining software systems to meet business needs, proficient in various programming languages and software development methodologies. Problem-solving skills and ability to troubleshoot technical issues.",
+        "technical-expertise": {
+            "title": "TECHNICAL EXPERTISE",
+            "description": "Proficient in developing scalable and high-performance applications using .Net CORE / .Net Framework, and C#, JavaScript / Node.js / Typescript. Angular / React, and HTML5 / CSS3 / Bootstrap. Creating responsive web pages converted from UI/UX design (adobe photoshop / adobe XD), Cross-Browser / mobile devices Compatibility. Database design and development using SQL (T-SQL, PL/SQL), LINQ to Objects and Lambda Expressions, NoSQL mongo DB, ORM frameworks such as Dapper and Entity. RESTful APIs using ASP.NET / ASP.Net CORE, Web API, and Web Services WSDL, Asp.Net MVC. Familiarity with D365 Commerce CMS tool and its functionalities. Version control systems such as GIT, TFS, and SVN. CI/CD Pipeline tools like Bitbucket, Azure DevOps. Collaborative project and development tools like: Azure, Jira, and GitHub. Knowledge in Docker and Kubernetes. AWS technologies such as Serverless, Lambda functions, and API Gateway.",
+            "skills": [
+                {"name":"", "description":"", "level":"" },
+                {"name":".Net CORE","description": "", "level":""},
+                {"name":".Net Framework","description": "", "level": ""},
+                {"name":"C#","description": "", "level": ""},
+                {"name":"JavaScript","description": "", "level": ""},
+                {"name":"Node.js","description": "", "level": ""},
+                {"name":"Typescript","description": "", "level": ""},
+                {"name":"Angular","description": "", "level": ""},
+                {"name":"React","description": "", "level": ""},
+                {"name":"HTML5","description": "", "level": ""},
+                {"name":"CSS3","description": "", "level": ""},
+                {"name":"Bootstrap","description": "", "level": ""},
+                {"name":"responsive web pages","description": "", "level": ""},
+                {"name":"Cross-Browser design","description": "", "level": ""},
+                {"name":"mobile devices Compatibility design","description": "", "level": ""},
+                {"name":"Database design and development","description": "", "level": ""},
+                {"name":"SQL","description": "", "level": ""},
+                {"name":"T-SQL","description": "", "level": ""},
+                {"name":"PL/SQL","description": "", "level": ""},
+                {"name":"LINQ to Objects","description": "", "level": ""},
+                {"name":"Lambda Expressions","description": "", "level": ""},
+                {"name":"NoSQL mongo DB","description": "", "level": ""},
+                {"name":"ORM frameworks","description": "", "level": ""},
+                {"name":"Dapper","description": "", "level": ""},
+                {"name":"Entity framework","description": "", "level": ""},
+                {"name":"RESTful APIs","description": "", "level": ""},
+                {"name":"Web API","description": "", "level": ""},
+                {"name":"Web Services WSDL","description": "", "level": ""},
+                {"name":"Asp.Net MVC","description": "", "level": ""},
+                {"name":"D365 Commerce CMS tool","description": "", "level": ""},
+                {"name":"Version control systems","description": "", "level": ""},
+                {"name":"GIT","description": "", "level": ""},
+                {"name":"TFS","description": "", "level": ""},
+                {"name":"SVN","description": "", "level": ""},
+                {"name":"CI/CD Pipeline tools","description": "", "level": ""},
+                {"name":"Bitbucket","description": "", "level": ""},
+                {"name":"Azure DevOps Services","description": "", "level": ""},
+                {"name":"Jira","description": "", "level": ""},
+                {"name":"GitHub","description": "", "level": ""},
+                {"name":"Docker","description": "", "level": ""},
+                {"name":"Kubernetes","description": "", "level": ""},
+                {"name":"AWS Serverless Lambda functions","description": "", "level": ""},
+                {"name":"AWS API Gateway","description": "", "level": ""},
+                {"name":"AWS SQS","description": "", "level": ""},
+                {"name":"AWS S3","description": "", "level": ""},
+                {"name":"AWS DynamoDB","description": "", "level": ""},
+                {"name":"AWS SES","description": "", "level": ""},
+                {"name":"AWS DocumentDB","description": "", "level": ""}
+            ]
+        }
+    },
+    "work-xp": [
+        {
+            "title": "RELEVANT WORK EXPERIENCE",
+            "position": "Full stack Developer",
+            "company": "Gui.Solutions",
+            "type": "remote",
+            "start-date": "2017-01-01",
+            "end-date": "2018-01-01",
+            "location": {
+                "city": "Moncton",
+                "state": "NB",
+                "country": "Canada"
+            },
+            "description": "Business institutional website.",
+            "achievements": [
+                "Developed an administrative and content management area.",
+                "Used AWS services to implement an API Gateway in TypeScript with a serverless concept",
+                "Implemented a NoSql MongoDB data source.",
+                "Employed microservices architecture in a serverless concept using TypeScript and libraries like aws-sdk for the AWS services integration, mongoose to establish a MongoDB database secure connection, Joi to Implement essential data validations, enhancing data integrity and security, and Jest to proficiently design, execute, and extract comprehensive coverage reports for unit tests.",
+                "Implemented RESTful API's using AWS API Gateway, ensuring efficient communication with the back-end services.",
+                "Developed the front-end web solution using Angular 10 (TypeScript), SASS, and Bootstrap5, delivering an intuitive and responsive web pages user interface, ensuring compatibility across various browsers and mobile devices.",
+                "Used AWS CodeCommit and CodePipeline for the GIT version control and the CI/CD pipeline.",
+                "Implemented Lambda functions, API Gateway, S3, SQS, SES, and CloudFront, optimizing system performance and reliability."
+            ]
+        }
+    ]
+}
+    
+    
+        
+  

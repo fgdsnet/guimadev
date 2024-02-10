@@ -1,0 +1,183 @@
+<div class="resume">
+  <div class="content">
+
+    <h1>{{resume.name.description}}</h1>
+    <ul class="highlights">
+      <li *ngFor="let highlight of resume.highlights">
+        <a *ngIf="highlight.link" href="{{highlight.link}}" target="_blank">{{highlight.description}}</a>
+        {{!highlight.link? highlight.description : ''}}
+      </li>
+    </ul>
+
+    <h4><span>Contact:</span></h4>
+    <ul class="contact">
+      <li>
+        <span class="contact-label">{{resume.contact.email.label}}</span>
+        {{resume.contact.email.description}}
+      </li>
+      <li>
+        <span class="contact-label">{{resume.contact.phone.label}}</span>
+        {{resume.contact.phone.description}}
+      </li>
+      <li>
+        <span class="contact-label">{{resume.contact.linkedin.label}}</span>
+        <a target="_blank" href={{resume.contact.linkedin.description}}>
+          {{resume.contact.linkedin.description}}
+        </a>
+      </li>
+      <li>
+        <span class="contact-label">{{resume.contact.github.label}}</span>
+        <a target="_blank" href={{resume.contact.github.description}}>
+          {{resume.contact.github.description}}
+        </a>
+      </li>
+    </ul>
+    
+    <section class="pro-profile">
+      <a data-bs-toggle="collapse" href="#pro-profile-collapsible-content" role="button" aria-expanded="true" aria-controls="pro-profile-collapsible-content">
+        <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-down"></div>
+          <div class="bi bi-chevron-double-up"></div>
+          <h2><span>{{resume.professionalProfile.label}}</span></h2>
+        </div>
+      </a>
+      <div class="collapse pro-profile-collapsible-content show" id="pro-profile-collapsible-content">
+        <p>{{resume.professionalProfile.description}}</p>
+      </div>
+    </section>
+    
+    <section class="technical-xp">
+      <a data-bs-toggle="collapse" href="#technical-xp-collapsible-content" role="button" aria-expanded="true" aria-controls="technical-xp-collapsible-content">
+        <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-down"></div>
+          <div class="bi bi-chevron-double-up"></div>
+          <h2><span>{{resume.professionalProfile.technicalExpertise.label}}</span></h2>
+        </div>
+      </a>
+      <div class="collapse technical-xp-collapsible-content show" id="technical-xp-collapsible-content">
+        <P>{{resume.professionalProfile.technicalExpertise.description}}</P>
+      </div>
+    </section>
+
+    <section class="work-xp">
+      <a data-bs-toggle="collapse" href="#work-xp-collapsible-content" role="button" aria-expanded="true" aria-controls="work-xp-collapsible-content">
+        <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-down"></div>
+          <div class="bi bi-chevron-double-up"></div>
+          <h2><span>{{resume.workXPList.label}}</span></h2>
+        </div>
+      </a>
+      <div class="collapse work-xp-collapsible-content show" id="work-xp-collapsible-content">
+        <div class="xp-list" *ngFor="let wxp of resume.workXPList.list; index as i">
+          <a data-bs-toggle="collapse" [href]="'#collapsible-content' + i" role="button" aria-expanded="true" [attr.aria-controls]="'collapsible-content' + i">
+            <div class="collapse-bar">
+              <div class="bi bi-chevron-double-down"></div>
+              <div class="bi bi-chevron-double-up"></div>
+              <div class="container">
+                <div>{{wxp.position.description + " - " + 
+                  wxp.company.description +
+                  wxp.jobLocation.city.description + ", " +
+                  wxp.jobLocation.state.description + ", " +
+                  wxp.jobLocation.country.description + " (" + 
+                  wxp.type.description + ") " + 
+                  " " + (wxp.jobPeriod.startDate.description| date: "MMM YYYY") + 
+                  " - " + (!wxp.jobPeriod.current? (wxp.jobPeriod.endDate.description| date: "MMM YYYY"): "Now")}}
+                </div>
+              </div>         
+            </div>
+          </a>
+          <div class="collapse collapsible-content show" [id]="'collapsible-content' + i">
+            
+            <div class="role"><span class="label">{{wxp.position.label}}</span>{{wxp.position.description}}</div>
+            <div class="company"><span class="label">{{wxp.company.label}}</span>{{wxp.company.description}}</div>
+            <div class="type"><span class="label">{{wxp.type.label}}</span>{{wxp.type.description}}</div>
+            <div class="time"><span class="label">{{wxp.jobPeriod.label}}</span>
+              <div class="from"><span class="label">{{wxp.jobPeriod.startDate.label}}</span>{{wxp.jobPeriod.startDate.description| date: "MMM YYYY"}}</div>
+              <div class="to"><span class="label">{{wxp.jobPeriod.endDate.label}}</span>{{!wxp.jobPeriod.current? (wxp.jobPeriod.endDate.description| date: "MMM YYYY"): "Now"}}</div>
+            </div>
+            <div class="location">
+              <div class="city"><span class="label">{{wxp.jobLocation.city.label}}</span>{{wxp.jobLocation.city.description}}</div>
+              <div class="province"><span class="label">{{wxp.jobLocation.state.label}}</span>{{wxp.jobLocation.state.description}}</div>
+              <div class="country"><span class="label">{{wxp.jobLocation.country.label}}</span>{{wxp.jobLocation.country.description}}</div>
+            </div>
+            
+            <p>{{wxp.label}}{{wxp.description}}</p>
+            <ul>
+              <li *ngFor="let achievement of wxp.achievements"><span>{{achievement.description}}</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="education">
+      <a data-bs-toggle="collapse" href="#education-collapsible-content" role="button" aria-expanded="true" aria-controls="education-collapsible-content">
+        <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-down"></div>
+          <div class="bi bi-chevron-double-up"></div>
+          <h2><span>{{resume.education.label}}</span></h2>
+        </div>
+      </a>
+      <div class="collapse education-collapsible-content show" id="education-collapsible-content">
+        <h2>{{resume.education.credentialAnalysis.label}}</h2>
+        <div class="nameOnCredential">
+          <span class="label">{{resume.education.credentialAnalysis.nameOnCredential.label}}</span>
+          {{resume.education.credentialAnalysis.nameOnCredential.description}}
+        </div>
+        <div class="ref">
+          <span class="label">{{resume.education.credentialAnalysis.ref.label}}</span>
+          {{resume.education.credentialAnalysis.ref.description}}
+        </div>
+        <div class="credentialAuthentication">
+          <span class="label">{{resume.education.credentialAnalysis.credentialAuthentication.label}}</span>
+          {{resume.education.credentialAnalysis.credentialAuthentication.description}}
+        </div>
+        <div class="credential">
+          <span class="label">{{resume.education.credentialAnalysis.credential.label}}</span>
+          {{resume.education.credentialAnalysis.credential.description}}
+        </div>
+        <div class="country">
+          <span class="label">{{resume.education.credentialAnalysis.country.label}}</span>
+          {{resume.education.credentialAnalysis.country.description}}
+        </div>
+        <div class="major">
+          <span class="label">{{resume.education.credentialAnalysis.major.label}}</span>
+          {{resume.education.credentialAnalysis.major.description}}</div>
+        <div class="canadian-equivalency">
+          <span class="label">{{resume.education.credentialAnalysis.canadianEquivalency.label}}</span>
+          {{resume.education.credentialAnalysis.canadianEquivalency.description}}
+        </div>
+        <div class="year">
+          <span class="label">{{resume.education.credentialAnalysis.year.label}}</span>
+          {{resume.education.credentialAnalysis.year.description}}
+        </div>
+        <div class="awarded-by">
+          <span class="label">{{resume.education.credentialAnalysis.awardedBy.label}}</span>
+          {{resume.education.credentialAnalysis.awardedBy.description}}
+        </div>
+        <div class="status">
+          <span class="label">{{resume.education.credentialAnalysis.status.label}}</span>
+          {{resume.education.credentialAnalysis.status.description}}
+        </div>
+      </div>
+      
+      
+    </section>
+
+    <section class="certifications">
+      <a data-bs-toggle="collapse" href="#certifications-collapsible-content" role="button" aria-expanded="true" aria-controls="certifications-collapsible-content">
+        <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-down"></div>
+          <div class="bi bi-chevron-double-up"></div>
+          <h2><span>{{resume.certificationList.label}}</span></h2>
+        </div>
+      </a>
+      <div class="collapse certifications-collapsible-content show" id="certifications-collapsible-content">
+        <ul class="certification">
+          <li *ngFor="let certification of resume.certificationList.list">
+            {{certification.description}}
+          </li>
+        </ul>
+      </div>
+    </section>
+    </div>
+  </div>
