@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ResumeService } from '../../services/resume.service';
 import { Resume } from 'src/app/core/models/resume';
-import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
@@ -13,7 +12,7 @@ export class ResumeComponent {
   public resume: Resume = {} as Resume;
   public name: string = "";
   isCollapsed = true;
-  showEndDate: boolean = true;
+  editable: boolean = true;
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;
@@ -21,8 +20,25 @@ export class ResumeComponent {
 
   constructor(private resumeService: ResumeService) { 
     this.resumeService.loadResume().then(res => {
-      console.log('************ Resume', res);
+     // console.log('************ Resume', res);
       this.resume = res;
     });
+  }
+
+  editableClick(event: MouseEvent, item: any) {
+    const targetElement = event.target as HTMLElement;
+    const ariaControls = targetElement.getAttribute('aria-controls');
+    if (ariaControls) {
+      const inputElement = document.getElementById(ariaControls) as HTMLInputElement;
+      if (inputElement) {
+        item.editing = true;
+        setTimeout(()=>{ inputElement.select(); }, 50);
+      }
+    }
+  }
+
+  inputBlur(event: FocusEvent, item: any) {
+    item.description = (event.target as HTMLInputElement).value;
+    item.editing = false;
   }
 }

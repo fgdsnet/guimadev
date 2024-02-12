@@ -1,7 +1,14 @@
 <div class="resume">
   <div class="content">
-
-    <h1>{{resume.name.description}}</h1>
+    <div class="editable name" [ngClass]="{'d-none': resume.name.editing }">
+      <h1>
+        <i class="bi bi-pencil d-none"> Edit</i>
+        <span (click)="editableClick($event, resume.name)" aria-controls="input-name">
+          {{resume.name.description}}</span>
+      </h1>
+    </div>
+    <input class="input name" id="input-name" [ngClass]="{'d-none': !resume.name.editing }" 
+      (blur)="inputBlur($event, resume.name)" type="text" [value]="resume.name.description">
     <ul class="highlights">
       <li *ngFor="let highlight of resume.highlights">
         <a *ngIf="highlight.link" href="{{highlight.link}}" target="_blank">{{highlight.description}}</a>
@@ -36,8 +43,8 @@
     <section class="pro-profile">
       <a data-bs-toggle="collapse" href="#pro-profile-collapsible-content" role="button" aria-expanded="true" aria-controls="pro-profile-collapsible-content">
         <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-right"></div>
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
           <h2><span>{{resume.professionalProfile.label}}</span></h2>
         </div>
       </a>
@@ -49,8 +56,8 @@
     <section class="technical-xp">
       <a data-bs-toggle="collapse" href="#technical-xp-collapsible-content" role="button" aria-expanded="true" aria-controls="technical-xp-collapsible-content">
         <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-right"></div>
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
           <h2><span>{{resume.professionalProfile.technicalExpertise.label}}</span></h2>
         </div>
       </a>
@@ -62,8 +69,8 @@
     <section class="work-xp">
       <a data-bs-toggle="collapse" href="#work-xp-collapsible-content" role="button" aria-expanded="true" aria-controls="work-xp-collapsible-content">
         <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-right"></div>
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
           <h2><span>{{resume.workXPList.label}}</span></h2>
         </div>
       </a>
@@ -71,8 +78,8 @@
         <div class="xp-list" *ngFor="let wxp of resume.workXPList.list; index as i">
           <a data-bs-toggle="collapse" [href]="'#collapsible-content' + i" role="button" aria-expanded="true" [attr.aria-controls]="'collapsible-content' + i">
             <div class="collapse-bar">
+              <div class="bi bi-chevron-double-right"></div>
               <div class="bi bi-chevron-double-down"></div>
-              <div class="bi bi-chevron-double-up"></div>
               <div class="container">
                 <div>{{wxp.position.description + " - " + 
                   wxp.company.description + " - " +
@@ -117,8 +124,8 @@
     <section class="education">
       <a data-bs-toggle="collapse" href="#education-collapsible-content" role="button" aria-expanded="true" aria-controls="education-collapsible-content">
         <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-right"></div>
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
           <h2><span>{{resume.education.label}}</span></h2>
         </div>
       </a>
@@ -171,8 +178,8 @@
     <section class="certifications">
       <a data-bs-toggle="collapse" href="#certifications-collapsible-content" role="button" aria-expanded="true" aria-controls="certifications-collapsible-content">
         <div class="collapse-bar section">
+          <div class="bi bi-chevron-double-right"></div>
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
           <h2><span>{{resume.certificationList.label}}</span></h2>
         </div>
       </a>
