@@ -111,7 +111,7 @@
                 "job-period": {"label":"Time period: ", "description": "",
                     "start-date": {"label":"From: ", "description": "2022-12-15"},
                     "end-date": {"label":"To: ", "description": "2023-05-15"},
-                    "current": "false"
+                    "current": false
                 },
                 "job-location": {
                     "label":"", "description": "",
@@ -143,7 +143,7 @@
                 "job-period": {"label":"Time period: ", "description": "",
                     "start-date": {"label":"From: ", "description": "2021-09-15"},
                     "end-date": {"label":"To: ", "description": "2022-09-15"},
-                    "current": "false"
+                    "current": false
                 },
                 "job-location": {
                     "label":"", "description": "",
@@ -175,7 +175,7 @@
                 "job-period": {"label":"Time period: ", "description": "",
                     "start-date": {"label":"From: ", "description": "2020-07-15"},
                     "end-date": {"label":"To: ", "description": "2021-07-15"},
-                    "current": "false"
+                    "current": false
                 },
                 "job-location": {
                     "label":"", "description": "",
@@ -202,7 +202,7 @@
                 "job-period": {"label":"Time period: ", "description": "",
                     "start-date": {"label":"From: ", "description": "2016-11-15"},
                     "end-date": {"label":"To: ", "description": "2020-05-15"},
-                    "current": "false"
+                    "current": false
                 },
                 "job-location": {
                     "label":"", "description": "",
@@ -246,7 +246,7 @@
                 "job-period": {"label":"Time period: ", "description": "",
                     "start-date": {"label":"From: ", "description": "2016-04-15"},
                     "end-date": {"label":"To: ", "description": "2016-08-15"},
-                    "current": "false"
+                    "current": false
                 },
                 "job-location": {
                     "label":"", "description": "",
@@ -274,7 +274,7 @@
                 "job-period": {"label":"Time period: ", "description": "",
                     "start-date": {"label":"From: ", "description": "2012-03-15"},
                     "end-date": {"label":"To: ", "description": "2016-03-15"},
-                    "current": "false"
+                    "current": false
                 },
                 "job-location": {
                     "label":"", "description": "",
@@ -317,7 +317,7 @@
                 "job-period": {"label":"Time period: ", "description": "",
                     "start-date": {"label":"From: ", "description": "2012-03-15"},
                     "end-date": {"label":"To: ", "description": "2016-03-15"},
-                    "current": "false"
+                    "current": false
                 },
                 "job-location": {
                     "label":"", "description": "Migration SQL Server 2008",
