@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ResumeService } from '../../services/resume.service';
 import { Resume } from 'src/app/core/models/resume';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-resume',
@@ -10,8 +12,8 @@ import { Resume } from 'src/app/core/models/resume';
 export class ResumeComponent {
   public resume: Resume = {} as Resume;
   public name: string = "";
-
   isCollapsed = true;
+  showEndDate: boolean = true;
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;

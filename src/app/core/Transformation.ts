@@ -42,7 +42,9 @@ export class Transformation {
                 : Transformation.invalidValue(type, val, key, parent);
         }
         // Numbers can be parsed by Date but shouldn't be.
-        if (type === Date && typeof val !== "number") return Transformation.transformDate(val, getProperties);
+        if (type === Date && typeof val !== "number") return Transformation.transformDate(val, key);
+
+        if (type === Boolean || type === "boolean" || typeof val === "boolean") return Transformation.transformBool(val, key);
         return Transformation.transformPrimitive(type, val);
     }
 
@@ -83,6 +85,17 @@ export class Transformation {
             return Transformation.invalidValue(Transformation.arrayOf("Date"), val, key, parent);
         }
         return d;
+    }
+    
+    private static transformBool(val: any, key: any = ''): any {
+        if (val === null) {
+            return null;
+        }
+        const b = !!val;
+        if (typeof b !== "boolean") {
+            return Transformation.invalidValue(Transformation.arrayOf("Boolean"), val, key, parent);
+        }
+        return b;
     }
 
     private static transformObject(typeMap: any, props: { [k: string]: any }, additional: any, val: any, key: any = '', ref: any, getProperties: any = Transformation.jsonToJSProperties): any {

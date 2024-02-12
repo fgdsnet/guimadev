@@ -75,13 +75,18 @@
               <div class="bi bi-chevron-double-up"></div>
               <div class="container">
                 <div>{{wxp.position.description + " - " + 
-                  wxp.company.description +
+                  wxp.company.description + " - " +
                   wxp.jobLocation.city.description + ", " +
                   wxp.jobLocation.state.description + ", " +
                   wxp.jobLocation.country.description + " (" + 
-                  wxp.type.description + ") " + 
-                  " " + (wxp.jobPeriod.startDate.description| date: "MMM YYYY") + 
-                  " - " + (!wxp.jobPeriod.current? (wxp.jobPeriod.endDate.description| date: "MMM YYYY"): "Now")}}
+                  wxp.type.description + ") "}}
+                </div>
+                <div *ngIf="wxp.jobPeriod.current">
+                  {{" " + (wxp.jobPeriod.startDate.description| date: "MMM YYYY") + " - Now"}}
+                </div>
+                <div *ngIf="!wxp.jobPeriod.current">
+                  {{" " + (wxp.jobPeriod.startDate.description| date: "MMM YYYY") + " - " + 
+                  ((wxp.jobPeriod.endDate.description| date: "MMM YYYY"))}}
                 </div>
               </div>         
             </div>

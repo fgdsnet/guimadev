@@ -64,7 +64,7 @@ export class ResumeTypeMap {
             { json: "description", js: "description", type: "" },
             { json: "start-date", js: "startDate", type: trans.reference("ModelBase") },
             { json: "end-date", js: "endDate", type: trans.reference("ModelBase") },
-            { json: "current", js: "current", type: "" },
+            { json: "current", js: "current", type: "boolean" },
             ], false),
         "JobLocation": trans.objectOf([
             { json: "label", js: "label", type: "" },
