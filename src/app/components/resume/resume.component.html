@@ -1,37 +1,42 @@
 <div class="resume">
   <div class="content">
 
-    <h1>{{resume.name.description}}</h1>
+    <h1>{{resume.id.toString()}}</h1>
+    <h1>{{resume.name}}</h1>
     <ul class="highlights">
       <li *ngFor="let highlight of resume.highlights">
         <a *ngIf="highlight.link" href="{{highlight.link}}" target="_blank">{{highlight.description}}</a>
         {{!highlight.link? highlight.description : ''}}
       </li>
     </ul>
-
-    <h4><span>Contact:</span></h4>
-    <ul class="contact">
-      <li>
+    
+    <div class="contact">
+      <h4><span>Contact:</span></h4>
+      <div>
+        <i class="bi bi-envelope"></i>
         <span class="contact-label">{{resume.contact.email.label}}</span>
         {{resume.contact.email.description}}
-      </li>
-      <li>
+      </div>
+      <div>
+        <i class="bi bi-telephone"></i>
         <span class="contact-label">{{resume.contact.phone.label}}</span>
         {{resume.contact.phone.description}}
-      </li>
-      <li>
+      </div>
+      <div>
+        <i class="bi bi-linkedin"></i>
         <span class="contact-label">{{resume.contact.linkedin.label}}</span>
         <a target="_blank" href={{resume.contact.linkedin.description}}>
           {{resume.contact.linkedin.description}}
         </a>
-      </li>
-      <li>
+      </div>
+      <div>
+        <i class="bi bi-github"></i>
         <span class="contact-label">{{resume.contact.github.label}}</span>
         <a target="_blank" href={{resume.contact.github.description}}>
           {{resume.contact.github.description}}
         </a>
-      </li>
-    </ul>
+      </div>
+    </div>
     
     <section class="pro-profile">
       <a data-bs-toggle="collapse" href="#pro-profile-collapsible-content" role="button" aria-expanded="true" aria-controls="pro-profile-collapsible-content">

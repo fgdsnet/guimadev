@@ -1,5 +1,5 @@
 import { JobLocation } from "./job-location";
-import { ModelBase } from './model-base';
+import { ModelBase } from '../model-base';
 import { JobPeriod } from './job-period';
 
 export interface WorkXP extends ModelBase{

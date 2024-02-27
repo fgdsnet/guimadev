@@ -10,16 +10,16 @@ import { CertificationList } from "./certification-list";
 import { Contact } from "./contact";
 import { Education } from "./education";
 import { Highlight } from "./highlight";
-import { ModelBase } from "./model-base";
+import { ModelBase } from "../model-base";
 import { ProfessionalProfile } from "./professional-profile";
 import { WorkXPList } from "./work-xp-list";
+import { GUID } from "../guid";
 
 export interface Resume extends ModelBase {
-    name:                ModelBase;
-    highlights:          Highlight[];
-    contact:             Contact;
-    professionalProfile: ProfessionalProfile;
-    workXPList:          WorkXPList;
-    education:       Education;
-    certificationList:    CertificationList;
+    highlights:             Highlight[];
+    contact:                Contact;
+    professionalProfile:    ProfessionalProfile;
+    workXPList:             WorkXPList;
+    education:              Education;
+    certificationList:      CertificationList;
 }

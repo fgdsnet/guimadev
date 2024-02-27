@@ -1,11 +1,12 @@
-import { Transformation as trans } from '../Transformation';
+import { Transformation as trans } from '../../Transformation';
 
 export class ResumeTypeMap {
     // Data type mappings
 
     public static ResumeTypeMap: any = {
         "Resume": trans.objectOf([
-            { json: "name", js: "name", type: trans.reference("ModelBase") },
+            { json: "id", js: "id", type: trans.reference("GUID") },
+            { json: "name", js: "name", type: "" },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "highlights", js: "highlights", type: trans.arrayOf(trans.reference("Highlight")) },
@@ -16,6 +17,7 @@ export class ResumeTypeMap {
             { json: "certification-list", js: "certificationList", type: trans.reference("CertificationList") },
         ], false),
         "Contact": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "email", js: "email", type: trans.reference("ModelBase") },
@@ -24,32 +26,38 @@ export class ResumeTypeMap {
             { json: "github", js: "github", type: trans.reference("ModelBase") },
         ], false),
         "Highlight": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "link", js: "link", type: "" },
         ], false),
         "ProfessionalProfile": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "technical-expertise", js: "technicalExpertise", type: trans.reference("TechnicalExpertise") },
         ], false),
         "TechnicalExpertise": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "skills", js: "skills", type: trans.arrayOf(trans.reference("Skill")) },
         ], false),
         "Skill": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "name", js: "name", type: "" },
             { json: "level", js: "level", type: "" },
         ], false),
         "WorkXPList": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "list", js: "list", type: trans.arrayOf(trans.reference("WorkXP")) }
         ], false),
         "WorkXP": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "position", js: "position", type: trans.reference("ModelBase") },
@@ -60,6 +68,7 @@ export class ResumeTypeMap {
             { json: "achievements", js: "achievements", type: trans.arrayOf(trans.reference("ModelBase")) },
         ], false),
         "JobPeriod": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "start-date", js: "startDate", type: trans.reference("ModelBase") },
@@ -67,6 +76,7 @@ export class ResumeTypeMap {
             { json: "current", js: "current", type: "boolean" },
             ], false),
         "JobLocation": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "city", js: "city", type: trans.reference("ModelBase") },
@@ -74,11 +84,13 @@ export class ResumeTypeMap {
             { json: "country", js: "country", type: trans.reference("ModelBase") },
         ], false),
         "Education": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "credential-analysis", js: "credentialAnalysis", type: trans.reference("CredentialAnalysis") }
         ], false),
         "CredentialAnalysis": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "name-on-credential", js: "nameOnCredential", type: trans.reference("ModelBase") },
@@ -93,17 +105,23 @@ export class ResumeTypeMap {
             { json: "status", js: "status", type: trans.reference("ModelBase") },
         ], false),
         "CertificationList": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" },
             { json: "list", js: "list", type: trans.arrayOf(trans.reference("Certification")) }
         ], false),
         "Certification": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" }
         ], false),
         "ModelBase": trans.objectOf([
+            { json: "id", js: "id", type: trans.reference("GUID") },
             { json: "label", js: "label", type: "" },
             { json: "description", js: "description", type: "" }
         ], false),
+        "GUID": trans.objectOf([
+            { json: "id", js: "id", type: "" }
+        ], false)
     }
 }

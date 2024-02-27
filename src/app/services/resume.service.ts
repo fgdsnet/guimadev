@@ -1,7 +1,7 @@
 import * as resumeJson from '../../assets/resume.json';
 import { Injectable } from '@angular/core';
-import { ResumeConverter } from '../core/resume-converter';
-import { Resume } from '../core/models/resume';
+import { ResumeConverter } from '../core/models/resume/resume-converter';
+import { Resume } from '../core/models/resume/resume';
 
 @Injectable({
   providedIn: 'root'

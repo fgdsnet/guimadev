@@ -1,0 +1,16 @@
+[
+    {
+        "id": "9e3b4b0d-31f2-48d9-9368-3dd875324079",
+        "field-id": "367868a2-1ba3-4459-b2ea-ce0c831d7230",
+        "name": "SoftwareDevelopment",
+        "label": "Field Domain: ",
+        "description": "Software Development"
+    },
+    {
+        "id": "cf0de4bb-967c-4dc9-b712-1de4395a2cc3",
+        "field-id": "367868a2-1ba3-4459-b2ea-ce0c831d7230",
+        "name": "QualityAssurance",
+        "label": "Field Domain: ",
+        "description": "Quality Assurance"
+    }
+]
