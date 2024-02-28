@@ -1,0 +1,26 @@
+[
+    {
+        "id": "367868a2-1ba3-4459-b2ea-ce0c831d7230",
+        "name": "SOFTWARE_DEVELOPMENT",
+        "label": "Job Market Field: ",
+        "description": "Software Development"
+    },
+    {
+        "id": "ceef168e-4e14-4d36-8588-e3ef7fc2b121",
+        "name": "QUALITY_ASSURANCE",
+        "label": "Job Market Field: ",
+        "description": "Quality Assurance"
+    },
+    {
+        "id": "9e3b4b0d-31f2-48d9-9368-3dd875324079",
+        "name": "DATABASE",
+        "label": "Job Market Field: ",
+        "description": "Database"
+    },
+    {
+        "id": "cf0de4bb-967c-4dc9-b712-1de4395a2cc3",
+        "name": "SYSTEM_ANALYSIS",
+        "label": "Job Market Field: ",
+        "description": "System Analysis"
+    }
+]
