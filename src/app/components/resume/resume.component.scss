@@ -36,7 +36,7 @@ div.resume{
                     cursor: pointer;
                     }
                 }
-                .bi-chevron-double-up{
+                .bi-chevron-double-right{
                     display: block;
                     &:hover{
                     cursor: pointer;
@@ -54,7 +54,7 @@ div.resume{
                 .bi-chevron-double-down{
                     display: block !important;
                 }
-                .bi-chevron-double-up{
+                .bi-chevron-double-right{
                     display: none !important;
                 }
             }
@@ -82,9 +82,13 @@ div.resume{
             }
             .education-collapsible-content{
                 padding-left: 2rem;
+                padding-bottom: 2rem;
                 h2{
                     margin-left: 0;
                 }
+            }
+            .certifications-collapsible-content{
+                padding-left: 1rem;
             }
         }
         h1{ 

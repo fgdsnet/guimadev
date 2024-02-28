@@ -12,14 +12,14 @@
     <div class="contact">
       <h4><span>Contact:</span></h4>
       <div>
-        <i class="bi bi-envelope"></i>
-        <span class="contact-label">{{resume.contact.email.label}}</span>
-        {{resume.contact.email.description}}
-      </div>
-      <div>
         <i class="bi bi-telephone"></i>
         <span class="contact-label">{{resume.contact.phone.label}}</span>
         {{resume.contact.phone.description}}
+      </div>
+      <div>
+        <i class="bi bi-envelope"></i>
+        <span class="contact-label">{{resume.contact.email.label}}</span>
+        {{resume.contact.email.description}}
       </div>
       <div>
         <i class="bi bi-linkedin"></i>
@@ -41,7 +41,7 @@
       <a data-bs-toggle="collapse" href="#pro-profile-collapsible-content" role="button" aria-expanded="true" aria-controls="pro-profile-collapsible-content">
         <div class="collapse-bar section">
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
+          <div class="bi bi-chevron-double-right"></div>
           <h2><span>{{resume.professionalProfile.label}}</span></h2>
         </div>
       </a>
@@ -54,7 +54,7 @@
       <a data-bs-toggle="collapse" href="#technical-xp-collapsible-content" role="button" aria-expanded="true" aria-controls="technical-xp-collapsible-content">
         <div class="collapse-bar section">
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
+          <div class="bi bi-chevron-double-right"></div>
           <h2><span>{{resume.professionalProfile.technicalExpertise.label}}</span></h2>
         </div>
       </a>
@@ -67,7 +67,7 @@
       <a data-bs-toggle="collapse" href="#work-xp-collapsible-content" role="button" aria-expanded="true" aria-controls="work-xp-collapsible-content">
         <div class="collapse-bar section">
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
+          <div class="bi bi-chevron-double-right"></div>
           <h2><span>{{resume.workXPList.label}}</span></h2>
         </div>
       </a>
@@ -76,7 +76,7 @@
           <a data-bs-toggle="collapse" [href]="'#collapsible-content' + i" role="button" aria-expanded="true" [attr.aria-controls]="'collapsible-content' + i">
             <div class="collapse-bar">
               <div class="bi bi-chevron-double-down"></div>
-              <div class="bi bi-chevron-double-up"></div>
+              <div class="bi bi-chevron-double-right"></div>
               <div class="container">
                 <div>{{wxp.position.description + " - " + 
                   wxp.company.description + " - " +
@@ -122,7 +122,7 @@
       <a data-bs-toggle="collapse" href="#education-collapsible-content" role="button" aria-expanded="true" aria-controls="education-collapsible-content">
         <div class="collapse-bar section">
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
+          <div class="bi bi-chevron-double-right"></div>
           <h2><span>{{resume.education.label}}</span></h2>
         </div>
       </a>
@@ -176,7 +176,7 @@
       <a data-bs-toggle="collapse" href="#certifications-collapsible-content" role="button" aria-expanded="true" aria-controls="certifications-collapsible-content">
         <div class="collapse-bar section">
           <div class="bi bi-chevron-double-down"></div>
-          <div class="bi bi-chevron-double-up"></div>
+          <div class="bi bi-chevron-double-right"></div>
           <h2><span>{{resume.certificationList.label}}</span></h2>
         </div>
       </a>
